@@ -1,0 +1,47 @@
+#clins{
+    padding: 140px 0;
+}
+.clins p{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #0052CC;
+    text-align: center;
+}
+.clins_company{
+    display: flex;
+    width: 1178px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 64px;
+}
+.comapyCircle, .comapyTreva{
+    width: 172px;
+}
+.comapyKyan{
+    width: 132px;
+}
+.comapyAmara{
+    width: 182px;
+}
+.comapyaAven{
+    width: 160px;
+}
+.comapyCircle, .comapyKyan, .comapyTreva, .comapyAmara, .comapyaAven{
+    height: 48px;
+}
+.comapyCircle img, .comapyTreva img{
+    width: 100%;
+}
+.comapyKyan img{
+    width: 100%;
+}
+.comapyAmara img{
+    width: 100%;
+}
+.comapyaAven img{
+    width: 100%;
+}
+.comapyCircle img, .comapyKyan img, .comapyTreva img, .comapyAmara img, .comapyaAven img{
+    height: 100%;
+}
