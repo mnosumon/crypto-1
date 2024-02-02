@@ -4,10 +4,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+    margin-bottom: 600px;
 }
 .banner_wrapper{
     padding-top: 164px;
-    padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     gap: 50px;
