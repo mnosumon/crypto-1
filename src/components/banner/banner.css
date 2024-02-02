@@ -1,0 +1,74 @@
+#banner{
+    height: 910px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.banner_wrapper{
+    padding-top: 164px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+.content h2{
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 75px;
+    width: 863px;
+    text-align: center;
+}
+.banner_btn{
+    padding: 24px 48px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 26px;
+    border-radius: 8px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.4s ease;
+}
+.banner_btn:hover{
+    background-color: #FFFFFF;
+    color: #0052CC;
+    box-shadow: 3px 3px 1px 1px #0052CC;
+}
+.banner_btn:last-child{
+    margin-left: 24px;
+}
+.bannerCryptoCndle{
+    position: relative;
+    width: 1032px;
+}
+.banner_crypto{
+    width: 1032px;
+    height: 774px;
+    overflow: hidden;
+}
+.banner_crypto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner_crypto_mobile{
+    width: 323px;
+    height: 636px;
+    overflow: hidden;
+    position: absolute;
+    top: 202px;
+    right: 78px;
+}
+.banner_crypto_mobile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
