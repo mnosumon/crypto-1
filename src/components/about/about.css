@@ -1,0 +1,64 @@
+.about_wrapper{
+    display: flex;
+    gap: 146px;
+}
+.about_image{
+    height: 588px;
+    width: 484px;
+    overflow: hidden;
+}
+.about_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.about_details{
+    width: 586px;
+}
+.about_title span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #0052CC;
+    text-transform: capitalize;
+}
+.about_title h3{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 60px;
+    color: #0B141F;
+    padding: 20px 0 40px;
+}
+.about_title p{
+    font-size: 20px;
+    line-height: 26px;
+    color: #4E4E4E;
+}
+.about_ellipse {
+    height: 72px;
+    width: 90px;
+    overflow: hidden;
+}
+.about_ellipse img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.about_profile{
+    display: flex;
+    gap: 48px;
+    padding-top: 82px;
+}
+.about_description p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #4E4E4E;
+    padding-bottom: 10px;
+}
+.about_description span{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #0B141F;
+}
