@@ -28,7 +28,7 @@ const ProductFeature = () => {
                                 <img src={ThreeDym} alt="Three Dym" />
                             </div>
                         </div>
-                        <h5>Real-time analytics</h5>
+                        <h5>Intuitive dashboard</h5>
                         <p>See product usage, sign-ins, feature metrics change as users work on your.</p>
                     </div>
                     <div className="feature_item">
@@ -37,7 +37,7 @@ const ProductFeature = () => {
                                 <img src={ThreeDym} alt="Three Dym" />
                             </div>
                         </div>
-                        <h5>Real-time analytics</h5>
+                        <h5>Smart suggestions</h5>
                         <p>See product usage, sign-ins, feature metrics change as users work on your.</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const ProductFeature = () => {
                                 <img src={ThreeDym} alt="Three Dym" />
                             </div>
                         </div>
-                        <h5>Real-time analytics</h5>
+                        <h5>Multiple views</h5>
                         <p>See product usage, sign-ins, feature metrics change as users work on your.</p>
                     </div>
                     <div className="feature_item feature_right">
@@ -63,7 +63,7 @@ const ProductFeature = () => {
                                 <img src={ThreeDym} alt="Three Dym" />
                             </div>
                         </div>
-                        <h5>Real-time analytics</h5>
+                        <h5>AI-led diagnoses</h5>
                         <p>See product usage, sign-ins, feature metrics change as users work on your.</p>
                     </div>
                     <div className="feature_item feature_right">
@@ -72,7 +72,7 @@ const ProductFeature = () => {
                                 <img src={ThreeDym} alt="Three Dym" />
                             </div>
                         </div>
-                        <h5>Real-time analytics</h5>
+                        <h5>Responsive</h5>
                         <p>See product usage, sign-ins, feature metrics change as users work on your.</p>
                     </div>
                 </div>
