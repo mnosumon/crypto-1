@@ -1,6 +1,12 @@
+#about{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .about_wrapper{
     display: flex;
     gap: 146px;
+    padding-top: 140px;
 }
 .about_image{
     height: 588px;
@@ -61,4 +67,38 @@
     font-weight: 700;
     line-height: 36px;
     color: #0B141F;
+}
+
+.numbers_img{
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+}
+.numbers_img img{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 1128px;
+    margin: 0 auto;
+    padding: 152px 0 140px;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.number h3{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 60px;
+    color: #0052CC;
+}
+.number span{
+    font-size: 24px;
+    line-height: 36px;
+    color: #4E4E4E;
 }
