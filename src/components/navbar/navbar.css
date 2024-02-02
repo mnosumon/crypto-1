@@ -1,0 +1,37 @@
+#navbar{
+    border-bottom: 2px solid #C2D2EB;
+}
+.nav_wrapper{
+    background-color: #F0F6FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.logo{
+    height: 48px;
+    width: 102px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+.nav_btn{
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    border-radius: 8px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.3s ease;
+}
+.nav_btn:hover{
+    background-color: #FFFFFF;
+    color: #0052CC;
+    box-shadow: 3px 3px 1px 1px #0052CC;
+}
+.nav_btn:last-child{
+    margin-left: 16px;
+}
