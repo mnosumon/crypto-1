@@ -1,11 +1,21 @@
 #navbar{
     border-bottom: 2px solid #C2D2EB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    padding: 20px 0;
+    transition: 0.7s;
+}
+#navbar.fixed{
+    background-color: #c1c1c2;
+    padding: 10px 0;
 }
 .nav_wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 .logo{
     height: 48px;

@@ -3,6 +3,10 @@ import './navbar.css'
 import Logo from '../../assets/images/logo.png'
 
 const Navbar = () => {
+    window.addEventListener("scroll", function(){
+        let navbar = document.querySelector("#navbar");
+        navbar.classList.toggle("fixed", window.scrollY > 0)
+    })
   return (
     <>
         <nav id='navbar'>
