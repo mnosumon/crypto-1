@@ -11,30 +11,62 @@ import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 // } from 'react-accessible-accordion';
 
 const Question = () => {
-    let [datas, setdatas] = useState(false)
-    let data = ()=>{
-        setdatas(!datas)
+    let accordion = [
+        {
+            title: "What kind of data can I see in FieldX?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+        {
+            title: "Does Bizzy read my customers' data?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+        {
+            title: "What's your refund and cancellation policy?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+        {
+            title: "How do you take payments?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+        {
+            title: "Can I also track website analytics on fieldX?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+        {
+            title: "What makes Bizzy different from other analytics tools?",
+            content: "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim."
+        },
+    ]
+    let [activeAccordion, setActiveAccordion] = useState(0)
+
+    let handleClick = (index)=>{
+        setActiveAccordion(activeAccordion === index ? null : index)
     }
-    let [bizzRead, setbizzRead] = useState(false)
-    let bizzyRead = ()=>{
-        setbizzRead(!bizzRead)
-    }
-    let [refunded, setrefunded] = useState(false)
-    let refund = ()=>{
-        setrefunded(!refunded)
-    }
-    let [payment, setpayment] = useState(false)
-    let payMent = ()=>{
-        setpayment(!payment)
-    }
-    let [analytics, setanalytics] = useState(false)
-    let anaLytics = ()=>{
-        setanalytics(!analytics)
-    }
-    let [makes, setmakes] = useState(false)
-    let makeS = ()=>{
-        setmakes(!makes)
-    }
+
+    // let [datas, setdatas] = useState(false)
+    // let data = ()=>{
+    //     setdatas(!datas)
+    // }
+    // let [bizzRead, setbizzRead] = useState(false)
+    // let bizzyRead = ()=>{
+    //     setbizzRead(!bizzRead)
+    // }
+    // let [refunded, setrefunded] = useState(false)
+    // let refund = ()=>{
+    //     setrefunded(!refunded)
+    // }
+    // let [payment, setpayment] = useState(false)
+    // let payMent = ()=>{
+    //     setpayment(!payment)
+    // }
+    // let [analytics, setanalytics] = useState(false)
+    // let anaLytics = ()=>{
+    //     setanalytics(!analytics)
+    // }
+    // let [makes, setmakes] = useState(false)
+    // let makeS = ()=>{
+    //     setmakes(!makes)
+    // }
   return (
     <>
         <section id='faq' style={{backgroundImage: `url(${faqBackground})`}}>
@@ -44,36 +76,38 @@ const Question = () => {
                     <h3>Frequently asked questions</h3>
                 </div>
                 <div className="faq_question">
-                    <div className="accordian">
-                        <div className="accordianItem">
-                            <div className="accordianTitle">
-                                <div className="heading">
-                                    <h5 onClick={data} className=''>What kind of data can I see in FieldX?</h5>
+                    {
+                        accordion.map((item, index)=>(
+                            <div key={index} className="accordianItem">
+                                <div className="accordianTitle">
+                                    <div className="heading">
+                                        <h5 className=''>{item.title}</h5>
+                                    </div>
+                                    <div onClick={()=>handleClick(index)} className="accordianIcon">
+                                        {
+                                            activeAccordion === index ?<FaAngleDown/>:<FaAngleRight/>
+                                        }
+                                    </div>
                                 </div>
-                                <div className="accordianIcon">
-                                    {
-                                        datas
-                                        ?
-                                        <FaAngleDown onClick={data}/>
-                                        :
-                                        <FaAngleRight onClick={data} />
-                                    }
-                                </div>
+                                {
+                                    activeAccordion === index &&
+                                    <p className=''>{item.content}</p>
+                                }
                             </div>
-                            {
-                                datas &&
-                                <p className=''>
-                                    Exercitation in fugiat est ut ad ea cupidatat ut in
-                                    cupidatat occaecat ut occaecat consequat est minim minim
-                                    esse tempor laborum consequat esse adipisicing eu
-                                    reprehenderit enim.
-                                </p>
-                            }
-                        </div>
+
+                        ))
+                    }
+                        
+
+
+
+
+
+                    {/* <div className="accordian">
                         <div className="accordianItem">
                             <div className="accordianTitle">
                                 <div className="heading">
-                                    <h5 onClick={bizzyRead} className=''>What kind of data can I see in FieldX?</h5>
+                                    <h5 onClick={bizzyRead} className=''>Does Bizzy read my customers' data?</h5>
                                 </div>
                                 <div className="accordianIcon">
                                     {
@@ -120,8 +154,8 @@ const Question = () => {
                                 </p>
                             }
                         </div>
-                    </div>
-                    <div className="accordian">
+                    </div> */}
+                    {/* <div className="accordian">
                         <div className="accordianItem">
                             <div className="accordianTitle">
                                 <div className="heading">
@@ -197,7 +231,7 @@ const Question = () => {
                                 </p>
                             }
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

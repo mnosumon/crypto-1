@@ -26,15 +26,13 @@
     display: flex;
     gap: 32px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .accordianItem{
     padding: 32px;
     width: 592px;
     background-color: #FFFFFF;
     border-radius: 10px;
-}
-.accordianItem:nth-child(2){
-    margin: 32px 0;
 }
 .accordianTitle{
     display: flex;
