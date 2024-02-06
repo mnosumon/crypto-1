@@ -1,22 +1,26 @@
 import React from 'react'
-import Navbar from './components/navbar/Navbar'
-import Bannner from './components/banner/Bannner'
-import ProductFeature from './components/productFeatures/ProductFeature'
-import About from './components/about/About'
-import Clins from './components/clins/Clins'
-import Footer from './components/footer/Footer'
-import Question from './components/question/Question'
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+import RouteLayout from './RouteLayout'
+import Home from './pages/home/Home'
+import Login from './pages/login/Login'
 
 const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route element={<RouteLayout/>}>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+      </Route>
+    )
+  );
   return (
     <>
-      <Navbar/>
-      <Bannner/>
-      <ProductFeature/>
-      <About/>
-      <Question/>
-      <Clins/>
-      <Footer/>
+      <RouterProvider router={router} />
     </>
   )
 }
