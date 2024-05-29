@@ -76,8 +76,10 @@ const Question = () => {
                     <h3>Frequently asked questions</h3>
                 </div>
                 <div className="faq_question">
-                    {
+                <div className="faq_left">
+                {
                         accordion.map((item, index)=>(
+                            index <=2 &&
                             <div key={index} className="accordianItem">
                                 <div className="accordianTitle">
                                     <div className="heading">
@@ -94,14 +96,34 @@ const Question = () => {
                                     <p className=''>{item.content}</p>
                                 }
                             </div>
-
                         ))
                     }
-                        
 
+                </div>
+                <div className="faq_riht">
+                {
+                        accordion.map((item, index)=>(
+                            index >= 3 &&
+                            <div key={index} className="accordianItem">
+                                <div className="accordianTitle">
+                                    <div className="heading">
+                                        <h5 className=''>{item.title}</h5>
+                                    </div>
+                                    <div onClick={()=>handleClick(index)} className="accordianIcon">
+                                        {
+                                            activeAccordion === index ?<FaAngleDown/>:<FaAngleRight/>
+                                        }
+                                    </div>
+                                </div>
+                                {
+                                    activeAccordion === index &&
+                                    <p className=''>{item.content}</p>
+                                }
+                            </div>
+                        ))
+                    }
 
-
-
+                </div>
 
                     {/* <div className="accordian">
                         <div className="accordianItem">

@@ -46,3 +46,7 @@
 .nav_btn:last-child{
     margin-left: 16px;
 }
+
+@media screen and (max-width: 576px) {
+    
+}

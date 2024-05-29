@@ -8,11 +8,11 @@ import Clins from '../../components/clins/Clins'
 const Home = () => {
   return (
     <>
-        <Bannner/>
+        {/* <Bannner/>
         <ProductFeature/>
         <About/>
         <Question/>
-        <Clins/>
+        <Clins/> */}
     </>
   )
 }

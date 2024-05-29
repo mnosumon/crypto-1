@@ -21,3 +21,8 @@ ul, ol{
   width: 1216px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1200px) {
+  .container{
+    max-width: 100%;
+  }
+}

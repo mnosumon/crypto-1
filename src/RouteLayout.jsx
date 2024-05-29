@@ -8,7 +8,7 @@ const RouteLayout = () => {
     <>
         <Navbar/>
             <Outlet/>
-        <Footer/>
+        {/* <Footer/> */}
     </>
   )
 }
