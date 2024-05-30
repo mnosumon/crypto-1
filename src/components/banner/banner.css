@@ -72,3 +72,25 @@
     height: 100%;
     object-fit: cover;
 }
+
+
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 768px) {
+    .content h2 {
+        font-size: 36px;
+        line-height: 48px;
+        width: auto;
+    }
+    .banner_btn {
+        padding: 7px 15px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 922px) {
+
+}
+@media screen and (max-width: 1200px) {
+
+}
