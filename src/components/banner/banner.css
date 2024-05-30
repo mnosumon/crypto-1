@@ -75,19 +75,7 @@
 
 
 @media screen and (max-width: 576px) {
-    .bannerCryptoCndle {
-        max-width: 100%;
-    }
-    .banner_crypto{
-        max-width: 100%;
-        height: auto;
-    }
-    .banner_crypto_mobile {
-        width: 80%;
-        height: auto;
-        top: 30%;
-        right: 10%;
-    }
+
 }
 @media screen and (max-width: 768px) {
     .content h2 {
@@ -104,12 +92,18 @@
     }
 }
 @media screen and (max-width: 922px) {
-    .content h2 {
-        width: auto;
+    .bannerCryptoCndle {
+        max-width: 100%;
     }
-    .banner_btn {
-        padding: 16px 24px;
-        font-size: 18px;
+    .banner_crypto{
+        max-width: 100%;
+        height: auto;
+    }
+    .banner_crypto_mobile {
+        width: 80%;
+        height: auto;
+        top: 30%;
+        right: 10%;
     }
 }
 @media screen and (max-width: 1200px) {
