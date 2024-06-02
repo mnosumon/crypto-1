@@ -29,7 +29,10 @@ const SignUp = () => {
                                 <option>555</option>
                             </select>
                             <div className="checkbox">
-                                <input type="checkbox" />
+                                <label htmlFor="" className='check_Container'>
+                                    <input type="checkbox" checked="checked" className='check_Field' />
+                                    <span></span>
+                                </label>
                                 <p className='checkboxTerm'> I read and agree to the <Link>Terms & Conditions</Link></p>
                             </div>
                         </div>
