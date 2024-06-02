@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import Logo from '../../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     window.addEventListener("scroll", function(){
@@ -18,8 +19,8 @@ const Navbar = () => {
                         </a>
                     </div>
                     <div className="loginRegistration">
-                        <button className='nav_btn'>Login</button>
-                        <button className='nav_btn'>Registration</button>
+                        <Link to="/login" className='nav_btn'>Login</Link>
+                        <Link to="/signUp" className='nav_btn'>Registration</Link>
                     </div>
                 </div>
             </div>

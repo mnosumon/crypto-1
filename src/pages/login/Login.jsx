@@ -22,7 +22,7 @@ const Login = () => {
                         <button className='login_btn'>Login</button>
                     </form>
                     <div className="notSingup">
-                        <span>Don’t have any account? <Link>Sign Up</Link></span>
+                        <span>Don’t have any account? <Link to="#">Sign Up</Link></span>
                     </div>
                 </div>
             </div>
