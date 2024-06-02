@@ -45,3 +45,27 @@
 .comapyCircle img, .comapyKyan img, .comapyTreva img, .comapyAmara img, .comapyaAven img{
     height: 100%;
 }
+
+
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 768px) {
+    .clins_company{
+        width: auto;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 767.98px) and (max-width: 922px) {
+    .clins_company{
+        width: auto;
+        gap: 20px;
+    }
+}
+@media screen and (min-width: 921.98px) and (max-width: 1200px) {
+    .clins_company{
+        width: auto;
+    }
+}
