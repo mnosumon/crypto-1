@@ -1,0 +1,139 @@
+#login{
+    padding: 184px 0 129px;
+    background-color: #F0F6FF;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login{
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+}
+.login_wrapper{
+    width: 608px;
+    margin: 0 auto;
+    padding: 98px 0 113px;
+}
+.login_title{
+    text-align: center;
+}
+.login_title span{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #4E4E4E;
+}
+.login_title h3{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 72px;
+    color: #0B141F;
+    padding-bottom: 16px;
+}
+.form{
+    padding-bottom: 98px;
+}
+.form_wrapper{
+    margin: 48px 0;
+}
+
+.registerField{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #898989;
+    border: none;
+    outline: none;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #E1E1E1;
+    width: 100%;
+    padding-top: 25px;
+}
+.checkbox{
+    display: flex;
+    gap: 20px;
+    padding-top: 25px;
+}
+.checkboxTerm{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #898989;
+    width: 100%;
+}
+.login_btn{
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 26px;
+    border-radius: 8px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.login_btn:hover{
+    background-color: #0052CC;
+    opacity: 0.8;
+}
+.notSingup{
+    text-align: center;
+}
+.notSingup span{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #0B141F;
+}
+.notSingup a{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #0052CC;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 768px) {
+    .login_title h3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .login_title span {
+        font-size: 18px;
+    }
+    .inputField {
+        font-size: 18px;
+        line-height: 24px;
+        padding-bottom: 10px;
+    }
+    .login{
+        width: auto;
+        border-radius: 16px;
+        padding: 0 10px;
+    }
+    .login_wrapper{
+        width: auto;
+        padding: 18px 0 30px;
+    }
+    .notSingup span {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 767.98px) and (max-width: 922px) {
+    .login {
+        width: auto;
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .login {
+        max-width: 900px;
+    }
+}

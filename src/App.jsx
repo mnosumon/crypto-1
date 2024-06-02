@@ -8,6 +8,7 @@ import {
 import RouteLayout from './RouteLayout'
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
+import SignUp from './pages/singup/SignUp';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const App = () => {
       <Route element={<RouteLayout/>}>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/signUp' element={<SignUp/>}/>
       </Route>
     )
   );
