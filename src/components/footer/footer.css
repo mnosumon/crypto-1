@@ -57,3 +57,10 @@
 .word_style{
     color: red;
 }
+
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: auto;
+    }
+}
