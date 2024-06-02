@@ -41,14 +41,12 @@
     color: #4E4E4E;
 }
 .about_ellipse {
-    height: 72px;
+    height: 90px;
     width: 90px;
-    overflow: hidden;
 }
 .about_ellipse img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 .about_profile{
     display: flex;
@@ -101,4 +99,102 @@
     font-size: 24px;
     line-height: 36px;
     color: #4E4E4E;
+}
+
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 768px) {
+    .about_wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 46px;
+        padding-top: 40px;
+    }
+    .about_details{
+        width: auto;
+    }
+    .about_title h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about_profile {
+        gap: 20px;
+        padding-top: 32px;
+    }
+    .about_image {
+        height: auto;
+        width: 100%;
+    }
+
+
+
+
+    .numbers {
+        flex-wrap: wrap;
+        gap: 20px;
+        width: auto;
+        padding: 52px 0 40px;
+    }
+    .numbers_img {
+        height: auto;
+        width: 36px;
+    }
+    .number h3 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .number span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media screen and (min-width: 767.98px) and (max-width: 922px) {
+    .about_wrapper{
+        gap: 50px;
+    }
+    .about_details{
+        max-width: 600px;
+    }
+    .about_title h3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+
+
+    .numbers {
+        width: auto;
+        padding: 52px 0 40px;
+    }
+    .number h3 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .number span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media screen and (min-width: 921.98px) and (max-width: 1200px) {
+    .about_wrapper{
+        gap: 50px;
+    }
+    .about_details{
+        max-width: 600px;
+    }
+    .about_title h3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+
+
+    .numbers {
+        width: auto;
+    }
+    .number h3 {
+        font-size: 28px;
+        line-height: 40px;
+    }
 }

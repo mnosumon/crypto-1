@@ -105,7 +105,6 @@
     }
 }
 @media screen and (min-width: 767.98px) and (max-width: 922px) {
-
     .content h2 {
         font-size: 42px;
         line-height: 48px;
@@ -133,5 +132,11 @@
     }
 }
 @media screen and (max-width: 1200px) {
-
+    .bannerCryptoCndle {
+        max-width: 100%;
+    }
+    .banner_crypto{
+        max-width: 100%;
+        height: auto;
+    }
 }
