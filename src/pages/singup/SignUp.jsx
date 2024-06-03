@@ -5,10 +5,22 @@ import { Link } from 'react-router-dom'
 import { useFormik } from 'formik';
 
 let initialState = {
-    
+    fullName: "",
+    email: "",
+    password: "",
+    id: "",
+    phone: "",
+    role: "",
+    terms: "",
 }
 
 const SignUp = () => {
+    let formik = useFormik({
+        initialValues: initialState,
+        onSubmit: ()=>{
+            console.log("hello");
+        }
+    })
   return (
     <>
     <section id='login' style={{backgroundImage: `url(${BannerImg})`}}>
@@ -38,7 +50,7 @@ const SignUp = () => {
                                 <p className='checkboxTerm'> I read and agree to the <Link>Terms & Conditions</Link></p>
                             </div>
                         </div>
-                        <button className='login_btn'>Registration</button>
+                        <button type='submit' className='login_btn'>Registration</button>
                     </form>
                     <div className="notSingup">
                         <span>Already have an account? <Link to="/login">Login</Link></span>
