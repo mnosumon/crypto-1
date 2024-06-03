@@ -14,9 +14,9 @@ const Navbar = () => {
             <div className="container">
                 <div className="nav_wrapper">
                     <div className="logo">
-                        <a href="#">
+                        <Link to="/">
                             <img src={Logo} alt="logo" />
-                        </a>
+                        </Link>
                     </div>
                     <div className="loginRegistration">
                         <Link to="/login" className='nav_btn'>Login</Link>

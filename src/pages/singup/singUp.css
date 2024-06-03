@@ -1,33 +1,3 @@
-.check_Container{
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none;
-}
-.check_Field{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-.check_Container span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-}
-.check_Container span::after{
-    content: "";
-    position: absolute;
-    display: none;
-}
-
 #login{
     padding: 184px 0 129px;
     background-color: #F0F6FF;

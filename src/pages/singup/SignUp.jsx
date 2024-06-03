@@ -2,6 +2,11 @@ import React from 'react'
 import './singUp.css'
 import BannerImg from '../../assets/images/banner.png'
 import { Link } from 'react-router-dom'
+import { useFormik } from 'formik';
+
+let initialState = {
+    
+}
 
 const SignUp = () => {
   return (
@@ -29,10 +34,7 @@ const SignUp = () => {
                                 <option>555</option>
                             </select>
                             <div className="checkbox">
-                                <label htmlFor="" className='check_Container'>
-                                    <input type="checkbox" checked="checked" className='check_Field' />
-                                    <span></span>
-                                </label>
+                                <input type="checkbox" checked="checked" className='check_Field' />
                                 <p className='checkboxTerm'> I read and agree to the <Link>Terms & Conditions</Link></p>
                             </div>
                         </div>
