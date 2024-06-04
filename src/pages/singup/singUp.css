@@ -125,6 +125,13 @@
     align-items: center;
     padding-top: 16px;
 }
+.errors{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: red;
+    padding-top: 5px;
+}
 
 
 @media screen and (max-width: 576px) {
