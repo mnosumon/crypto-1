@@ -21,6 +21,7 @@ const SignUp = () => {
             console.log("hello");
         }
     })
+    console.log(formik.values);
   return (
     <>
     <section id='login' style={{backgroundImage: `url(${BannerImg})`}}>
@@ -31,14 +32,20 @@ const SignUp = () => {
                         <h3>Create Account</h3>
                         <span>Fill in the details below to create an account</span>
                     </div>
-                    <form action="" className='form'>
+                    <form onSubmit={formik.handleSubmit} action="" className='form'>
                         <div className="form_wrapper">
-                            <input className='registerField' type='text' placeholder='Enter Your Full Name' name='name'/>
-                            <input className='registerField' type='email' placeholder='Enter Your Email' name='email'/>
-                            <input className='registerField' type='number' placeholder='your ID' name='id'/>
-                            <input className='registerField' type='tel' placeholder='Your Mobile Number' name='phone'/>
-                            <input className='registerField' type="password" placeholder='Password' name='password'/>
-                            <input className='registerField' type="password" placeholder='Confirmed Password' name='password'/>
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.fullName}  className='registerField' type='text' placeholder='Enter Your Full Name' name='fullName'/>
+
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.email} className='registerField' type='email' placeholder='Enter Your Email' name='email'/>
+
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.id} className='registerField' type='number' placeholder='your ID' name='id'/>
+
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.phone} className='registerField' type='tel' placeholder='Your Mobile Number' name='phone'/>
+                            
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.password} className='registerField' type="password" placeholder='Password' name='password'/>
+
+                            <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.password} className='registerField' type="password" placeholder='Confirmed Password' name='password'/>
+
                             <select className='registerField' name="role" id="role">
                                 <option>Select your role</option>
                                 <option>333</option>
