@@ -10,9 +10,9 @@ let initialState = {
     lastName: "",
     email: "",
     password: "",
-    birthYear: "",
-    birthMonth: "",
-    birthDay: "",
+    birthYear: new Date().getFullYear(),
+    birthMonth: new Date().getMonth() + 1,
+    birthDay: new Date().getDate(),
     gender: "",
 }
 
@@ -26,6 +26,10 @@ const SignUp = () => {
     })
     let {errors, touched} = formik
 
+    let storeYear = new Date().getFullYear()
+    let years = Array.from(new Array(105), (val, index) => storeYear - index )
+
+console.log(years);
 
   return (
     <>
@@ -61,9 +65,11 @@ const SignUp = () => {
                             <div className="birth">
                                 <select className='birthField' name="birthYear" id="role">
                                     <option>Birth year</option>
-                                    <option>333</option>
-                                    <option>444</option>
-                                    <option>555</option>
+                                    {
+                                        years.map((item, index) =>(
+                                            <option key={index}>{item}</option>
+                                        )) 
+                                    }
                                 </select>
                                 <select className='birthField' name="birthMonth" id="role">
                                     <option>Birth Month</option>
@@ -81,9 +87,9 @@ const SignUp = () => {
                             <div className='genderPart'>
                                 <p >Select your gender</p>
                                 <div className="gender">
-                                    <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.gender} type="radio" id='male' name='gender'/>
+                                    <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value="male" type="radio" id='male' name='gender'/>
                                     <label htmlFor="male">Male</label>
-                                    <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.gender} type="radio" id='female' name='gender' />
+                                    <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value="female" type="radio" id='female' name='gender' />
                                     <label htmlFor="female">Female</label>
                                 </div>
                                 {
