@@ -28,6 +28,11 @@ const SignUp = () => {
 
     let storeYear = new Date().getFullYear()
     let years = Array.from(new Array(105), (val, index) => storeYear - index )
+    let months = Array.from(new Array(12), (val, index) => 1 + index)
+    let day = ()=>{
+        return new Date(formik.values.birthYear, formik.values.birthMonth, 0).getDate()
+    }
+    let dates = Array.from(new Array(day()), (val, index) => 1 + index)
 
 console.log(years);
 
@@ -73,15 +78,19 @@ console.log(years);
                                 </select>
                                 <select className='birthField' name="birthMonth" id="role">
                                     <option>Birth Month</option>
-                                    <option>333</option>
-                                    <option>444</option>
-                                    <option>555</option>
+                                    {
+                                        months.map((item, index) =>(
+                                            <option key={index}>{item}</option>
+                                        )) 
+                                    }
                                 </select>
                                 <select className='birthField' name="birthDay" id="role">
                                     <option>Birth day</option>
-                                    <option>333</option>
-                                    <option>444</option>
-                                    <option>555</option>
+                                    {
+                                        dates.map((item, index) =>(
+                                            <option key={index}>{item}</option>
+                                        )) 
+                                    }
                                 </select>
                             </div>
                             <div className='genderPart'>
