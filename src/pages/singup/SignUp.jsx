@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './singUp.css'
 import BannerImg from '../../assets/images/banner.png'
 import { Link } from 'react-router-dom'
@@ -17,25 +17,39 @@ let initialState = {
 }
 
 const SignUp = () => {
+    let [ageValidation, setAgeValidation] = useState("")
     let formik = useFormik({
         initialValues: initialState,
         validationSchema: singUp,
         onSubmit: ()=>{
-            console.log("hello");
+            let currentDate = new Date()
+            let pickedDate = new Date(
+                formik.values.birthYear,
+                formik.values.birthMonth - 1,
+                formik.values.birthDay,
+            )
+            let adult = new Date(1970 + 18, 0, 1)
+            let tooOld = new Date(1970 + 70, 0, 1)
+            if (currentDate - pickedDate < adult) {
+                return setAgeValidation("you are not 18+");
+            }else if (currentDate - pickedDate > tooOld) {
+                return setAgeValidation("you are 70+");
+            }else{
+                return setAgeValidation("");
+            }
         }
     })
+
     let {errors, touched} = formik
 
     let storeYear = new Date().getFullYear()
     let years = Array.from(new Array(105), (val, index) => storeYear - index )
     let months = Array.from(new Array(12), (val, index) => 1 + index)
-    let day = ()=>{
+    let days = ()=>{
         return new Date(formik.values.birthYear, formik.values.birthMonth, 0).getDate()
     }
-    let dates = Array.from(new Array(day()), (val, index) => 1 + index)
-
-console.log(years);
-
+    let dates = Array.from(new Array(days()), (val, index) => 1 + index)
+    
   return (
     <>
     <section id='login' style={{backgroundImage: `url(${BannerImg})`}}>
@@ -68,15 +82,15 @@ console.log(years);
                             <input onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.password} className='registerField' type="password" placeholder='Confirmed Password' name='password'/>
 
                             <div className="birth">
-                                <select className='birthField' name="birthYear" id="role">
+                                <select onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.birthYear} name='birthYear' className='birthField'>
                                     <option>Birth year</option>
                                     {
-                                        years.map((item, index) =>(
+                                        years.map((item, index)=>(
                                             <option key={index}>{item}</option>
-                                        )) 
+                                        ))
                                     }
                                 </select>
-                                <select className='birthField' name="birthMonth" id="role">
+                                <select onChange={formik.handleChange} value={formik.values.birthMonth} autoComplete='off' onBlur={formik.handleBlur} className='birthField' name="birthMonth">
                                     <option>Birth Month</option>
                                     {
                                         months.map((item, index) =>(
@@ -84,7 +98,7 @@ console.log(years);
                                         )) 
                                     }
                                 </select>
-                                <select className='birthField' name="birthDay" id="role">
+                                <select onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete='off' value={formik.values.birthDay} className='birthField' name="birthDay">
                                     <option>Birth day</option>
                                     {
                                         dates.map((item, index) =>(
@@ -93,6 +107,9 @@ console.log(years);
                                     }
                                 </select>
                             </div>
+                            {                  
+                            ageValidation && <p className='errors'>{ageValidation}</p>     
+                            }
                             <div className='genderPart'>
                                 <p >Select your gender</p>
                                 <div className="gender">
